@@ -4,7 +4,7 @@ The [EasySendSMS REST API](https://www.easysendsms.com/) offers a comprehensive 
 
 ## Authentication
 
-To authenticate requests to the [EasySendSMS REST API](https://www.easysendsms.com/api/), you need an API key, available in the EasySendSMS Customer Dashboard under the API settings section.
+To authenticate requests to the [EasySendSMS REST API](https://www.easysendsms.com/rest-api), you need an API key, available in the EasySendSMS Customer Dashboard under the API settings section.
 
 Include your API key in the request header using the `apikey` field. This authentication step is mandatory for all API requests.
 
@@ -30,7 +30,7 @@ The Send SMS API is a versatile and robust solution designed to enable seamless 
 
 ### Message Type Support
 
-The [EasySendSMS REST API](https://www.easysendsms.com/sms-api/) supports various message types and can handle multiple recipients in a single request, ensuring your messages are delivered promptly and reliably.
+The [EasySendSMS REST API](https://www.easysendsms.com/rest-api) supports various message types and can handle multiple recipients in a single request, ensuring your messages are delivered promptly and reliably.
 
 - **Base URL**: `https://restapi.easysendsms.app/v1/rest/sms/send`
 - **Method**: `POST`
@@ -140,7 +140,7 @@ curl -X POST \
 
 ## SMS Balance REST API
 
-This REST API endpoint allows you to request and check your SMS account balance. To retrieve your balance, the client can issue either a `GET` or `POST` request to the [EasySendSMS REST API](https://www.easysendsms.com/api/). The request must include the required `APIKEY` header, which contains your API key.
+This REST API endpoint allows you to request and check your SMS account balance. To retrieve your balance, the client can issue either a `GET` or `POST` request to the [EasySendSMS REST API](https://www.easysendsms.com/rest-api). The request must include the required `APIKEY` header, which contains your API key.
 
 This key can be found in the "Account Settings" under the "REST API" section. Upon successful submission, our system will return a JSON-formatted response that provides the current account balance. Additionally, if the request is successful, the response will include a status code indicating the success of the operation.
 
