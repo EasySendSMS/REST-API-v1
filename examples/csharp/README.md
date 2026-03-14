@@ -44,7 +44,7 @@ This folder contains a .NET 8 console application demonstrating how to send an S
 
     Open your terminal and change to this directory:
     ```sh
-    cd /path/to/csharp_example
+    cd examples/csharp
     ```
 
 3.  **Run the Application**
