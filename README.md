@@ -155,11 +155,10 @@ If the request is valid, the API returns a **JSON response** containing the curr
 ### Request Format
 
 - **GET Request**  
-  No request body is required. The request must include the `APIKEY` header.
-  **Query Parameters**  
-  No query parameters are required for this endpoint.
+  No query parameters are required for this endpoint.  The request must include the `APIKEY` header.
 
-- **POST Request**  
+- **POST Request**
+- No request body is required. The request must include the `APIKEY` header.
   This endpoint **does not require a request body**. Send the request with an **empty payload**.
   Content-Type: application/json  
  
