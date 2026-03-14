@@ -186,6 +186,15 @@ The API will reject all requests exceeding this rate limit with a `429 Too Many 
 | 4008 | Internal server error. Do **not** retry the same request. | 500 |
 | 4009 | Service temporarily unavailable. Do **not** retry the same request immediately. | 503 |
 
+
+### Example (POST Request)
+
+```bash
+curl -X POST "https://restapi.easysendsms.app/v1/rest/sms/balance" \
+  -H "APIKEY: YOUR_API_KEY" \
+  -H "Content-Type: application/json" \
+  -H "Content-Length: 0"
+
 ### Example Error Response
 
 ```json
