@@ -4,6 +4,33 @@
 
 The [EasySendSMS REST API](https://www.easysendsms.com/) offers a comprehensive set of tools designed to handle a wide range of communication tasks. Beyond sending and receiving SMS messages, our API supports HLR lookup for real-time number verification, number validation services, and much more. This powerful API is built for precision and reliability, providing all the necessary features to integrate advanced communication capabilities directly into your applications.
 
+
+---
+
+## Code Examples
+
+EasySendSMS provides **ready-to-run examples in multiple programming languages** to help developers integrate the API quickly.
+
+Each example demonstrates how to authenticate, send SMS messages, and handle API responses.
+
+| Language | Example Folder |
+|--------|--------|
+| C# (.NET 8) | `examples/csharp` |
+| Java (Maven) | `examples/java` |
+| Python | `examples/python` |
+| PHP | `examples/php` |
+
+
+You can explore the full working examples inside the **examples** directory of this repository.
+
+Example usage:
+
+```bash
+git clone https://github.com/EasySendSMS/REST-API-v1.git
+cd REST-API-v1/examples/csharp
+dotnet run
+
+
 ---
 
 ## Base URL
