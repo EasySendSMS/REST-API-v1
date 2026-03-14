@@ -387,16 +387,14 @@ A maximum of 30 numbers can be submitted per request. Duplicate numbers will be 
 | 4004 | Invalid IP address. | 403 |
 | 4005 | Inactive API Key. | 403 |
 | 4006 | Inactive Account. | 403 |
-| 4007 | Demo Account Expired. | 403 |
-| 4008 | Internal error (do NOT re-submit the same request again). |
-
- 500 |
-| 4009 | Service not available (do NOT re-submit the same request again). | 503 |
-| 4010 | Invalid Number Parameter. | 400 |
+| 4007 | Demo account expired. | 403 |
+| 4008 | Internal error (do **NOT** re-submit the same request again). | 500 |
+| 4009 | Service not available (do **NOT** re-submit the same request again). | 503 |
+| 4010 | Invalid number parameter. | 400 |
 | 4011 | Invalid NV response. | 500 |
 | 4012 | Insufficient credits. | 402 |
-| 405 | Method not allowed. | 405 |
-| 415 | Unsupported Media Type. | 415 |
+| 405  | Method not allowed. | 405 |
+| 415  | Unsupported media type. | 415 |
 
 ### Example Request
 
