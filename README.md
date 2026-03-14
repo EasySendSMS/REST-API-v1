@@ -161,8 +161,8 @@ If the request is valid, the API returns a **JSON response** containing the curr
 
 - **POST Request**  
   This endpoint **does not require a request body**. Send the request with an **empty payload**.
-  Content-Type: application/json
-  Content-Length: 0
+  Content-Type: application/json  
+ 
 
   Some HTTP clients automatically add a `Content-Type` header when sending `POST` requests. If this happens, ensure the request still contains **no body**. 
 
@@ -177,17 +177,15 @@ The API will reject all requests exceeding this rate limit with a `429 Too Many 
 
 | Code | Description | HTTP Status |
 |------|-------------|-------------|
-| 4001
-
- | One or more required parameters are missing. | 400 |
-| 4002 | No API key found in request. | 401 |
-| 4003 | Invalid API Key. | 401 |
+| 4001 | One or more required parameters are missing. | 400 |
+| 4002 | No API key found in the request. | 401 |
+| 4003 | Invalid API key. | 401 |
 | 4004 | Invalid IP address. | 403 |
-| 4005 | Inactive API Key. | 403 |
-| 4006 | Inactive Account. | 403 |
-| 4007 | Demo Account Expired. | 403 |
-| 4008 | Internal error (do NOT re-submit the same request again). | 500 |
-| 4009 | Service not available (do NOT re-submit the same request again). | 503 |
+| 4005 | API key is inactive. | 403 |
+| 4006 | Account is inactive. | 403 |
+| 4007 | Demo account has expired. | 403 |
+| 4008 | Internal server error. Do **not** retry the same request. | 500 |
+| 4009 | Service temporarily unavailable. Do **not** retry the same request immediately. | 503 |
 
 ### Example Error Response
 
