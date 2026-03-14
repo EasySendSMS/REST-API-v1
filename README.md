@@ -140,17 +140,32 @@ curl -X POST \
 
 ## SMS Balance REST API
 
-This REST API endpoint allows you to request and check your SMS account balance. To retrieve your balance, the client can issue either a `GET` or `POST` request to the [EasySendSMS REST API](https://www.easysendsms.com/rest-api). The request must include the required `APIKEY` header, which contains your API key.
+The **SMS Balance REST API** allows developers to retrieve the current SMS credit balance associated with their EasySendSMS account.
 
-This key can be found in the "Account Settings" under the "REST API" section. Upon successful submission, our system will return a JSON-formatted response that provides the current account balance. Additionally, if the request is successful, the response will include a status code indicating the success of the operation.
+Clients may send either a `GET` or `POST` request to the EasySendSMS REST API endpoint. Each request must include a valid **APIKEY** header containing the account API key.
 
-- **Base URL**: `https://restapi.easysendsms.app/v1/rest/sms/balance`
-- **Method**: `GET` `POST`
+Your API key can be found in the **Account Settings → REST API** section inside the EasySendSMS dashboard.
 
-### Request Schema
+If the request is valid, the API returns a **JSON response** containing the current SMS balance and a status code indicating the result of the request.
 
-- **Content Type**: `application/x-www-form-urlencoded` (for POST Form Data)
-- **Query String**: (for GET or URL parameters in POST)
+
+- **Base URL**: `https://restapi.easysendsms.app/v1/rest/sms/balance`  
+- **Method**: `GET`, `POST`
+
+### Request Format
+
+- **GET Request**  
+  No request body is required. The request must include the `APIKEY` header.
+  **Query Parameters**  
+  No query parameters are required for this endpoint.
+
+- **POST Request**  
+  This endpoint **does not require a request body**. Send the request with an **empty payload**.
+  Content-Type: application/json
+  Content-Length: 0
+
+  Some HTTP clients automatically add a `Content-Type` header when sending `POST` requests. If this happens, ensure the request still contains **no body**. 
+
 
 ### API Rate Limit
 
