@@ -29,6 +29,7 @@ Example usage:
 git clone https://github.com/EasySendSMS/REST-API-v1.git
 cd REST-API-v1/examples/csharp
 dotnet run
+```
 
 
 ---
