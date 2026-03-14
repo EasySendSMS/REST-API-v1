@@ -9,27 +9,32 @@ The [EasySendSMS REST API](https://www.easysendsms.com/) offers a comprehensive 
 
 ## Code Examples
 
-EasySendSMS provides **ready-to-run examples in multiple programming languages** to help developers integrate the API quickly.
+EasySendSMS provides **ready-to-run examples in multiple programming languages** to help developers integrate the API quickly. Each example is self-contained, includes detailed setup instructions, and demonstrates how to authenticate, send messages, and handle API responses.
 
-Each example demonstrates how to authenticate, send SMS messages, and handle API responses.
+| Language | Description | View on GitHub |
+| :--- | :--- | :--- |
+| **C#** | A .NET 8 console application with zero external dependencies, using the built-in `HttpClient`. | [![C#](https://img.shields.io/badge/C%23-512BD4?logo=csharp&logoColor=white)](https://github.com/EasySendSMS/REST-API-v1/tree/main/examples/csharp) |
+| **Java** | A Maven project for Java 11+ using the built-in `java.net.http.HttpClient` with no external libraries required. | [![Java](https://img.shields.io/badge/Java-ED8B00?logo=openjdk&logoColor=white)](https://github.com/EasySendSMS/REST-API-v1/tree/main/examples/java) |
+| **Python** | A Python 3.9+ script using the standard `requests` library, organized into a dedicated client class. | [![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white)](https://github.com/EasySendSMS/REST-API-v1/tree/main/examples/python) |
+| **PHP** | A PHP 8.0+ script with no Composer dependencies, using the built-in cURL extension. | [![PHP](https://img.shields.io/badge/PHP-777BB4?logo=php&logoColor=white)](https://github.com/EasySendSMS/REST-API-v1/tree/main/examples/php) |
 
-| Language | Example Folder |
-|--------|--------|
-| C# (.NET 8) | `examples/csharp` |
-| Java (Maven) | `examples/java` |
-| Python | `examples/python` |
-| PHP | `examples/php` |
+### Quick Start
 
-
-You can explore the full working examples inside the **examples** directory of this repository.
-
-Example usage:
+Clone the repository and run your preferred language example:
 
 ```bash
+# 1. Clone the repository
 git clone https://github.com/EasySendSMS/REST-API-v1.git
-cd REST-API-v1/examples/csharp
-dotnet run
+
+# 2. Navigate to an example directory (e.g., Python)
+cd REST-API-v1/examples/python
+
+# 3. Follow the instructions in the example's README.md file
+pip install -r requirements.txt
+export EASYSENDSMS_API_KEY="YOUR_API_KEY"
+python send_sms.py
 ```
+
 
 
 ---
