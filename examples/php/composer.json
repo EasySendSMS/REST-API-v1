@@ -1,0 +1,16 @@
+{
+    "name": "easysendsms/php-send-sms-example",
+    "description": "EasySendSMS REST API - Send SMS Example (PHP)",
+    "type": "project",
+    "require": {
+        "php": ">=8.0",
+        "ext-curl": "*",
+        "ext-json": "*"
+    },
+    "license": "MIT",
+    "autoload": {
+        "files": [
+            "EasySendSmsClient.php"
+        ]
+    }
+}
