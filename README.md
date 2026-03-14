@@ -126,7 +126,7 @@ curl -X POST \
 -H "Content-Type: application/json" \
 -H "Accept: application/json" \
 -d '{
-    "from": "YourSenderName",
+    "from": "SenderName",
     "to": "12345678900",
     "text": "Hello, this is a test message!",
     "type": "0"
@@ -154,7 +154,7 @@ curl -X POST \
 -H "Content-Type: application/json" \
 -H "Accept: application/json" \
 -d '{
-    "from": "YourSenderName",
+    "from": "SenderName",
     "to": "12345678900,1234",
     "text": "Hello, this is a test message!",
     "type": "0"
