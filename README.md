@@ -118,7 +118,11 @@ Below are example requests and responses for sending SMS messages using the Easy
 
 ---
 
-## Example Request (Single Recipient)
+### Example 1: Standard Text Message (Single Recipient)
+
+This example shows how to send a standard plain text message to a single mobile number.
+
+#### Request
 
 ```bash
 curl -X POST \
@@ -134,7 +138,7 @@ curl -X POST \
 "https://restapi.easysendsms.app/v1/rest/sms/send"
 ```
 
-### Example Success Response
+#### Success Response
 
 ```json
 {
@@ -146,7 +150,118 @@ curl -X POST \
 }
 ```
 
-## Example Request (Partial Request With Invalid Number)
+---
+
+### Example 2: Unicode Message (Arabic)
+
+This example demonstrates how to send a message containing Unicode characters, such as Arabic. Note that the `type` parameter is set to `1`.
+
+#### Request
+
+```bash
+curl -X POST \
+-H "apikey: YOUR_API_KEY" \
+-H "Content-Type: application/json" \
+-H "Accept: application/json" \
+-d '{
+    "from": "SenderName",
+    "to": "12345678900",
+    "text": "مرحبا، هذه رسالة اختبار!",
+    "type": "1"
+}' \
+"https://restapi.easysendsms.app/v1/rest/sms/send"
+```
+
+#### Success Response
+
+```json
+{
+    "status": "OK",
+    "scheduled": "Now",
+    "messageIds": [
+        "OK: 8f3d9b7a-5c1e-4b9a-8d2f-1c7e9a0b3d1c"
+    ]
+}
+```
+
+---
+
+### Example 3: Scheduled Message
+
+This example shows how to schedule an SMS to be sent at a future date and time. The `scheduled` parameter must be a valid ISO 8601 timestamp in UTC.
+
+#### Request
+
+```bash
+curl -X POST \
+-H "apikey: YOUR_API_KEY" \
+-H "Content-Type: application/json" \
+-H "Accept: application/json" \
+-d '{
+    "from": "SenderName",
+    "to": "12345678900",
+    "text": "This is a scheduled message for the team meeting.",
+    "type": "0",
+    "scheduled": "2026-03-15T10:00:00Z"
+}' \
+"https://restapi.easysendsms.app/v1/rest/sms/send"
+```
+
+#### Success Response
+
+```json
+{
+    "status": "OK",
+    "scheduled": "2026-03-15T10:00:00Z",
+    "messageIds": [
+        "OK: a1b2c3d4-e5f6-7890-1234-567890abcdef"
+    ]
+}
+```
+
+---
+
+### Example 4: Bulk Message (Multiple Recipients)
+
+This example shows how to send the same message to multiple recipients in a single API call. The `to` parameter accepts a comma-separated list of up to 30 phone numbers.
+
+#### Request
+
+```bash
+curl -X POST \
+-H "apikey: YOUR_API_KEY" \
+-H "Content-Type: application/json" \
+-H "Accept: application/json" \
+-d '{
+    "from": "PromoAlert",
+    "to": "12345678901,12345678902,12345678903",
+    "text": "Flash sale ends tonight! Use code SAVE50 for 50% off.",
+    "type": "0"
+}' \
+"https://restapi.easysendsms.app/v1/rest/sms/send"
+```
+
+#### Success Response
+
+```json
+{
+    "status": "OK",
+    "scheduled": "Now",
+    "messageIds": [
+        "OK: 1e1a7c30-a160-429f-9c5a-3251dc1522cc",
+        "OK: 2f2b8d41-b271-430a-ad6b-4362ed2633dd",
+        "OK: 3g3c9e52-c382-441b-be7c-5473fe3744ee"
+    ]
+}
+```
+
+---
+
+### Example 5: Partial Success (with Invalid Number)
+
+This example demonstrates how the API handles a request with both valid and invalid recipient numbers. The API will skip the invalid number (`1234`) and successfully send the message to the valid number.
+
+#### Request
 
 ```bash
 curl -X POST \
@@ -162,8 +277,7 @@ curl -X POST \
 "https://restapi.easysendsms.app/v1/rest/sms/send"
 ```
 
-
-### Example Partial Success Response
+#### Partial Success Response
 
 ```json
 {
@@ -171,12 +285,18 @@ curl -X POST \
     "scheduled": "Now",
     "messageIds": [
         "OK: 69991a73-a560-429f-9c5a-3251dc1522bb",
-        "ERR: 4010"
+        "ERR: 4012"
     ]
 }
 ```
 
-### Example Error Response
+---
+
+### Example 6: General Error Response
+
+This is an example of a generic error response, which occurs when a request fails due to issues like an invalid mobile number.
+
+#### Error Response
 
 ```json
 {
@@ -184,6 +304,7 @@ curl -X POST \
     "description": "Invalid mobile number."
 }
 ```
+
 
 ### Error Codes
 
