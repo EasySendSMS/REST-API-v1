@@ -416,7 +416,7 @@ curl -X POST "https://restapi.easysendsms.app/v1/rest/sms/balance" \
 
 ```json
 {
-    "error": 4005,
+    "error": 4003,
     "description": "Invalid API Key."
 }
 ```
