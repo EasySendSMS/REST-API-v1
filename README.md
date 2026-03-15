@@ -753,7 +753,7 @@ When an error occurs, the API returns a JSON object containing an `error` code a
 ```json
 {
     "error": 4012,
-    "description": "Invalid mobile number."
+    "description": "Insufficient credits."
 }
 ```
 
